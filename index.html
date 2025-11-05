@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micah Brown e.K – Software Development</title>
+  <meta name="description" content="Custom software, mobile apps, web development, AI & automation for small businesses in Frankfurt. Bilingual (EN/DE)." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ctext y='0.9em' font-size='200'%3E💻%3C/text%3E%3C/svg%3E" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#1a73e8',
+              dark: '#1557b0'
+            }
+          },
+          boxShadow: {
+            soft: '0 8px 24px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Smooth fade for theme switch */
+    .theme-transition * { transition: background-color .3s, color .3s, border-color .3s; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-950 dark:text-gray-100">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-gray-900/60 border-b border-gray-200/60 dark:border-gray-800">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#home" class="font-semibold tracking-tight text-xl">Micah Brown <span class="text-brand">e.K</span></a>
+      <div class="flex items-center gap-4">
+        <a href="#en" class="text-sm hover:text-brand">EN</a>
+        <span class="text-gray-400">|</span>
+        <a href="#de" class="text-sm hover:text-brand">DE</a>
+        <a href="#contact" class="hidden sm:inline-flex px-3 py-2 rounded-xl bg-brand text-white hover:bg-brand-dark text-sm shadow-soft">Contact</a>
+        <button id="themeToggle" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 text-sm hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle dark mode">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+          <span class="hidden sm:inline">Theme</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Custom Software, Mobile Apps, Websites & AI for Small Businesses</h1>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Frankfurt-based development with clear communication, fair pricing, and practical results.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-2xl bg-brand text-white hover:bg-brand-dark shadow-soft">📞 Free call / meeting</a>
+            <a href="#services" class="px-5 py-3 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">See what's possible</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-brand/10 to-purple-500/10 dark:from-brand/20 dark:to-purple-500/20 border border-gray-200 dark:border-gray-800 p-6">
+            <div class="grid grid-cols-2 gap-4 h-full">
+              <div class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4">📱 <span class="font-medium">Mobile Apps</span></div>
+              <div class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4">🌐 <span class="font-medium">Web Apps</span></div>
+              <div class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4">🤖 <span class="font-medium">ChatGPT</span></div>
+              <div class="rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-4">✉️ <span class="font-medium">Automation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGLISH SECTION -->
+  <section id="en" class="py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">👋 Welcome!</h2>
+      <p class="mt-3 text-gray-700 dark:text-gray-300">I’m Micah Brown, a freelance software developer in Frankfurt, Germany. I build <strong>custom mobile apps, websites, and automations</strong> for small businesses who want to save time, reach more customers, and modernize their processes.</p>
+
+      <!-- What's Possible -->
+      <div id="services" class="mt-10 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+          <h3 class="text-xl font-semibold">🚀 What’s Possible</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-300">Here are ideas to spark what we could build together.</p>
+          <ul class="mt-4 space-y-2 list-disc list-inside">
+            <li><strong>Mobile Apps:</strong> bookings, loyalty programs, event tickets, digital stamps, field service tools, inventory scans, push notifications.</li>
+            <li><strong>Websites & Web Apps:</strong> fast, mobile-friendly sites with online payments, customer portals, appointment calendars, dashboards.</li>
+            <li><strong>ChatGPT Integrations:</strong> website chat, FAQ bots, internal knowledge assistants, form autofill, lead qualification, custom workflows.</li>
+            <li><strong>Email Automation:</strong> quotes, reminders, follow-ups, invoices, onboarding sequences, win-back campaigns.</li>
+            <li><strong>Data & Dashboards:</strong> sales KPIs, Google Sheets/Excel sync, CSV imports, BI-style views.</li>
+            <li><strong>Other:</strong> QR menus, PDF generators, barcode/QR scanners, inventory tools, staff rostering.</li>
+          </ul>
+          <a href="#contact" class="inline-block mt-5 px-4 py-2 rounded-xl bg-brand text-white hover:bg-brand-dark">Book a free call</a>
+        </div>
+
+        <!-- Pricing -->
+        <div id="pricing" class="p-6 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 shadow-soft">
+          <h3 class="text-xl font-semibold">💶 Pricing (Negotiable)</h3>
+          <ul class="mt-3 space-y-2">
+            <li><strong>Hourly:</strong> €60–75/hour</li>
+            <li><strong>Fixed-price websites:</strong> from €600</li>
+            <li><strong>Automations & web apps:</strong> typically €1,200–2,000</li>
+            <li><strong>Publishing (app stores):</strong> +€200 optional service</li>
+          </ul>
+          <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">Final pricing depends on scope and timeline. I’m happy to adapt to your budget.</p>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div id="portfolio" class="mt-12">
+        <h3 class="text-xl font-semibold">🧩 Portfolio</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Selected projects and demos. (Add screenshots to <code>/assets</code> and update image URLs.)</p>
+        <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot 1</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Local Restaurant Finder (QR)</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Scan a QR to discover nearby spots within a 10-min walk.</p>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot 2</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Payment Reconciliation Tool</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Automated matching of vouchers & external payments.</p>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot 3</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Custom GPT Assistant</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">ChatGPT integration for support and lead qualification.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GERMAN SECTION -->
+  <section id="de" class="py-12 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">🇩🇪 Willkommen!</h2>
+      <p class="mt-3 text-gray-700 dark:text-gray-300">Ich bin Micah Brown, freiberuflicher Softwareentwickler in Frankfurt. Ich entwickle <strong>individuelle Apps, Webseiten und Automatisierungen</strong> für kleine Unternehmen, die Zeit sparen, mehr Kunden erreichen und Prozesse modernisieren möchten.</p>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+          <h3 class="text-xl font-semibold">🚀 Was ist möglich</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-300">Ideen, um die Fantasie anzuregen:</p>
+          <ul class="mt-4 space-y-2 list-disc list-inside">
+            <li><strong>Mobile Apps:</strong> Buchungen, Treueprogramme, Event-Tickets, digitale Stempel, Außendienst-Tools, Inventur-Scans, Push-Nachrichten.</li>
+            <li><strong>Webseiten & Web-Apps:</strong> schnelle, mobile Seiten mit Online-Zahlung, Kundenportal, Terminbuchung, Dashboards.</li>
+            <li><strong>ChatGPT-Integration:</strong> Website-Chat, FAQ-Bots, interne Wissensassistenten, Formular-Autofill, Lead-Qualifizierung.</li>
+            <li><strong>E-Mail-Automatisierung:</strong> Angebote, Erinnerungen, Follow-ups, Rechnungen, Onboarding, Reaktivierung.</li>
+            <li><strong>Daten & Dashboards:</strong> Verkaufs-KPIs, Google Sheets/Excel Sync, CSV-Importe, BI-Ansichten.</li>
+            <li><strong>Weitere:</strong> QR-Menüs, PDF-Generatoren, Barcode/QR-Scanner, Lager-Tools, Dienstpläne.</li>
+          </ul>
+          <a href="#contact" class="inline-block mt-5 px-4 py-2 rounded-xl bg-brand text-white hover:bg-brand-dark">Kostenloses Gespräch buchen</a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 shadow-soft">
+          <h3 class="text-xl font-semibold">💶 Preise (verhandelbar)</h3>
+          <ul class="mt-3 space-y-2">
+            <li><strong>Stundensatz:</strong> 60–75 € / Stunde</li>
+            <li><strong>Festpreis Webseiten:</strong> ab 600 €</li>
+            <li><strong>Automatisierungen & Web-Apps:</strong> meist 1.200–2.000 €</li>
+            <li><strong>Veröffentlichung (App Stores):</strong> +200 € optionaler Service</li>
+          </ul>
+          <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">Die endgültigen Kosten hängen vom Umfang und Zeitplan ab – ich passe mich gerne Ihrem Budget an.</p>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h3 class="text-xl font-semibold">🧩 Referenzen</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Ausgewählte Projekte und Demos. (Screenshots später ergänzen.)</p>
+        <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot A</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Lokaler Restaurant-Finder (QR)</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">QR scannen und Orte in 10 Minuten Fußweg entdecken.</p>
+            </div>
+          </article>
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot B</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Abgleich-Tool für Zahlungen</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Automatisierter Abgleich von Belegen & externen Zahlungen.</p>
+            </div>
+          </article>
+          <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-soft">
+            <div class="aspect-video bg-gray-100 dark:bg-gray-800 flex items-center justify-center">Screenshot C</div>
+            <div class="p-4">
+              <h4 class="font-semibold">Individueller GPT-Assistent</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">ChatGPT-Integration für Support & Lead-Qualifizierung.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 shadow-soft">
+        <h2 class="text-2xl font-bold">📬 Contact</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Prefer email? <a class="text-brand hover:underline" href="mailto:contact@micahbrown.dev">contact@micahbrown.dev</a></p>
+
+        <!-- Formspree-powered contact form -->
+        <!-- Replace ACTION URL with your Formspree form endpoint: https://formspree.io/f/{id} -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="mt-6 space-y-4">
+          <!-- Honeypot -->
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1" for="name">Name</label>
+              <input id="name" name="name" required class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="block text-sm mb-1" for="email">Email</label>
+              <input id="email" name="email" type="email" required class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-950 px-3 py-2" placeholder="Tell me about your project—goals, timeline, budget…"></textarea>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <input id="privacy" type="checkbox" required class="mt-1" />
+            <label for="privacy" class="text-sm text-gray-600 dark:text-gray-300">I agree that my data will be used to contact me about this request. (Datenschutz)</label>
+          </div>
+
+          <!-- Success/Failure alerts -->
+          <p id="formMsg" class="hidden text-sm"></p>
+
+          <button class="px-5 py-3 rounded-2xl bg-brand text-white hover:bg-brand-dark shadow-soft" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
+    © 2025 Micah Brown e.K — Software Development | Frankfurt, Germany
+  </footer>
+
+  <script>
+    // Theme toggle with localStorage
+    const html = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+
+    function setTheme(t) {
+      html.classList.add('theme-transition');
+      if (t === 'dark') {
+        html.classList.add('dark');
+        icon.textContent = '☀️';
+      } else {
+        html.classList.remove('dark');
+        icon.textContent = '🌙';
+      }
+      localStorage.setItem('theme', t);
+      setTimeout(() => html.classList.remove('theme-transition'), 300);
+    }
+
+    const preferred = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(preferred);
+
+    btn.addEventListener('click', () => {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Contact form progressive enhancement (AJAX submit to keep on page)
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.classList.remove('hidden');
+      msg.textContent = 'Sending…';
+      msg.className = 'text-sm text-gray-600 dark:text-gray-300';
+
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+        if (res.ok) {
+          msg.textContent = 'Thanks! I will get back to you shortly.';
+          msg.className = 'text-sm text-green-600';
+          form.reset();
+        } else {
+          msg.textContent = 'There was a problem. Please try again or email me directly.';
+          msg.className = 'text-sm text-red-600';
+        }
+      } catch (err) {
+        msg.textContent = 'Network error. Please email me directly.';
+        msg.className = 'text-sm text-red-600';
+      }
+    });
+  </script>
+</body>
+</html>
